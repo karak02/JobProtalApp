@@ -1,11 +1,16 @@
 import React from 'react'
 import Navbar from '../shared/Navbar'
+import Herosection from './homecomponents/Herosection'
+import CatagoryCarousel from './homecomponents/CatagoryCarousel'
+
+
 
 const Home = () => {
   return (
     <div>
         <Navbar />
-        <h1>Welcome to the home page</h1>
+        <Herosection/>
+        <CatagoryCarousel/>
     </div>
   )
 }
