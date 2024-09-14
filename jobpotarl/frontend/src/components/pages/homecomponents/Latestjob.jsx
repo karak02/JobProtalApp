@@ -14,7 +14,7 @@ const Latestjob = () => {
                         return (
                             <div key={item + index}>
 
-                                <a href="#" class="block max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
+                                <a href="#" class="block max-w-sm p-6 bg-white border hover:border-gray-200  rounded-lg  shadow-lg hover:shadow-fuchsia-800 hover:bg-gray-100  dark:border-gray-700 dark:hover:bg-gray-700">
 
                                     <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Google</h5>
                                     <h5 class="mb-2 text-1xl font-extralight tracking-tight text-gray-900 dark:text-white">India</h5>
