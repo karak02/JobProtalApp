@@ -41,7 +41,7 @@ const Navbar = () => {
               <PopoverTrigger className="pr-12 ">
                 <Avatar>
                   <AvatarImage src={user.profileImageUrl} alt="Profile" /> {/* Updated with user's profile image */}
-                  <AvatarFallback>{user.firstName?.[0]}{user.lastName?.[0]}</AvatarFallback> {/* Fallback initials */}
+                  <AvatarFallback>{user.firstName?.[0]}{user.lastName?.[0]}</AvatarFallback> 
                 </Avatar>
               </PopoverTrigger>
               <PopoverContent>
@@ -58,14 +58,14 @@ const Navbar = () => {
                 <div>
                   <div className='flex items-center gap-3 pt-5 cursor-pointer'>
                     <RxPerson className='w-9 h-6' />
-                    <h1>View Profile</h1>
+                    <button ><Link to='/profile' >View Profile</Link></button>
                   </div>
                   <div 
                     className='flex items-center gap-3 pt-5 cursor-pointer'
                     onClick={() => signOut()} // Logout function
                   >
                     <RxExit className='w-9 h-6' />
-                    <h1>Logout</h1>
+                    <button >Logout</button>
                   </div>
                 </div>
               </PopoverContent>

@@ -4,6 +4,7 @@ import Jobs from './components/pages/Jobs';
 import Browser from './components/pages/Browser';
 import Singup from './components/auth/Singup';
 import Login from './components/auth/Login';
+import Profile from './components/pages/Profile';
 
 
 function App() {
@@ -15,6 +16,7 @@ function App() {
          <Route path='/browser' element={<Browser/>} />
          <Route path='/singup' element={<Singup/>} />
          <Route path='/login' element={<Login/>} />
+         <Route path='/profile' element={<Profile/>} />
        </Routes>
    </>
   )
