@@ -6,7 +6,6 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel"
-import { Card, CardContent } from "@/components/ui/card"
 
 const catagory = [
   "Frontend Developer",
@@ -28,15 +27,14 @@ const catagory = [
 
 const CatagoryCarousel = () => {
   return (
-    <> 
-    {/* <div className='flex items-center justify-center m-auto'> */}
-      <Carousel className=" max-w-xl w-full mx-auto my-28">
+    <>
+      <Carousel className="max-w-xl w-full mx-auto my-28">
         <CarouselContent>
           {catagory.map((cat, index) => (
-            <CarouselItem classname='md:basis-1/2 lg-basis-1/3'>
+            <CarouselItem key={index} className='md:basis-1/2 lg:basis-1/3'>
               <div>
                 <div className="flex space-x-4 items-center justify-center">
-                  <button className="flex justify-center items-center bg-white text-black rounded-full px-6 py-3 mt-5 w-[60%] shadow-lg">
+                  <button className="flex justify-center items-center bg-gray-900 text-white rounded-full px-6 py-3 mt-5 w-[90%] shadow-lg">
                     {cat}
                   </button>
                 </div>
@@ -44,10 +42,9 @@ const CatagoryCarousel = () => {
             </CarouselItem>
           ))}
         </CarouselContent>
-        <CarouselPrevious />
-        <CarouselNext />
+        <CarouselPrevious className="text-black" />
+        <CarouselNext className="text-black" />
       </Carousel>
-      {/* </div> */}
     </>
   )
 }

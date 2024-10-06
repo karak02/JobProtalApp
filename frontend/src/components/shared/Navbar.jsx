@@ -38,38 +38,46 @@ const Navbar = () => {
             </div>
           ) : (
             <Popover>
-              <PopoverTrigger className="pr-12 ">
+            <PopoverTrigger className="pr-12">
+              <Avatar>
+                <AvatarImage src={user.profileImageUrl} alt="Profile" />
+                <AvatarFallback className="bg-black text-white">{user.firstName?.[0]}{user.lastName?.[0]}</AvatarFallback>
+              </Avatar>
+            </PopoverTrigger>
+      
+            <PopoverContent className="bg-black text-white p-4 rounded-lg shadow-md">
+              <div className="flex gap-3 items-center">
                 <Avatar>
-                  <AvatarImage src={user.profileImageUrl} alt="Profile" /> {/* Updated with user's profile image */}
-                  <AvatarFallback>{user.firstName?.[0]}{user.lastName?.[0]}</AvatarFallback> 
+                  <AvatarImage src={user.profileImageUrl} alt="Profile" />
+                  <AvatarFallback className="bg-gray-700 text-white">{user.firstName?.[0]}{user.lastName?.[0]}</AvatarFallback>
                 </Avatar>
-              </PopoverTrigger>
-              <PopoverContent>
-                <div className='flex gap-3'>
-                  <Avatar>
-                    <AvatarImage src={user.profileImageUrl} alt="Profile" /> {/* Updated */}
-                    <AvatarFallback>{user.firstName?.[0]}{user.lastName?.[0]}</AvatarFallback> {/* Updated */}
-                  </Avatar>
-                  <div>
-                    <h1 className='font-semibold items-center'>{user.fullName}</h1> {/* Updated to show full name */}
-                    <h2>{user.description || 'No description available'}</h2>
-                  </div>
-                </div>
                 <div>
-                  <div className='flex items-center gap-3 pt-5 cursor-pointer'>
-                    <RxPerson className='w-9 h-6' />
-                    <button ><Link to='/profile' >View Profile</Link></button>
-                  </div>
-                  <div 
-                    className='flex items-center gap-3 pt-5 cursor-pointer'
-                    onClick={() => signOut()} // Logout function
-                  >
-                    <RxExit className='w-9 h-6' />
-                    <button >Logout</button>
-                  </div>
+                  <h1 className="font-semibold">{user.fullName}</h1>
+                  <h2 className="text-gray-400">{user.description || 'No description available'}</h2>
                 </div>
-              </PopoverContent>
-            </Popover>
+              </div>
+      
+              <div className="mt-5">
+                <div className="flex items-center gap-3 cursor-pointer">
+                  <RxPerson className="w-6 h-6 text-white" />
+                  <button className="hover:text-[#ED1AFF] transition-colors duration-300" aria-label="View Profile">
+                    <Link to="/profile">View Profile</Link>
+                  </button>
+                </div>
+      
+                <div
+                  className="flex items-center gap-3 mt-5 cursor-pointer"
+                  onClick={() => signOut()}
+                  aria-label="Logout"
+                >
+                  <RxExit className="w-6 h-6 text-white" />
+                  <button className="hover:text-[#ED1AFF] transition-colors duration-300">
+                    Logout
+                  </button>
+                </div>
+              </div>
+            </PopoverContent>
+          </Popover>
           )
         }
       </div>

@@ -13,20 +13,16 @@ const Latestjob = () => {
                     randomjobs.slice(0, 6).map((item, index) => {
                         return (
                             <div key={item + index}>
-
-                                <a href="#" class="block max-w-sm p-6 bg-white border hover:border-gray-200  rounded-lg  shadow-lg hover:shadow-fuchsia-800 hover:bg-gray-100  dark:border-gray-700 dark:hover:bg-gray-700">
-
-                                    <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Google</h5>
-                                    <h5 class="mb-2 text-1xl font-extralight tracking-tight text-gray-900 dark:text-white">India</h5>
-                                    <h5 class="mb-2 text-2xl font-semibold tracking-tight text-gray-900 dark:text-white">Full Stack Developer</h5>
-                                    <p class="font-normal text-gray-700 dark:text-gray-400">Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.</p>
+                                <a href="#" className="block max-w-sm p-6 bg-gray-800 border hover:border-gray-200 rounded-lg shadow-lg hover:shadow-fuchsia-800 hover:bg-gray-700 dark:border-gray-700">
+                                    <h5 className="mb-2 text-2xl font-bold tracking-tight text-white">Google</h5>
+                                    <h5 className="mb-2 text-1xl font-extralight tracking-tight text-white">India</h5>
+                                    <h5 className="mb-2 text-2xl font-semibold tracking-tight text-white">Full Stack Developer</h5>
+                                    <p className="font-normal text-gray-400">Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.</p>
                                    
-                                   <Badge className='font-bold' variant="destructive">Full Time</Badge>
-                                   <Badge className='text-blue-700 font-bold' variant="ghost">2 positions</Badge>
-                                   <Badge className={'text-purple-700 font-bold'} variant="ghost">45 LPA</Badge>
+                                    <Badge className='font-bold text-white' variant="destructive">Full Time</Badge>
+                                    <Badge className='text-blue-300 font-bold' variant="ghost">2 positions</Badge>
+                                    <Badge className={'text-purple-300 font-bold'} variant="ghost">45 LPA</Badge>
                                 </a>
-
-
                             </div>
                         )
                     })
